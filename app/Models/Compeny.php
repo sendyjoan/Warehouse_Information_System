@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Product;
 use App\Models\Verified;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,5 +22,9 @@ class Compeny extends Model
 
     public function verified(){
         return $this->belongsTo(Verified::class);
+    }
+
+    public function product(){
+        return $this->belongsTo(Product::class);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Satuan;
+use App\Models\Compeny;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -20,5 +21,9 @@ class Product extends Model
 
     public function satuan(){
         return $this->belongsTo(Satuan::class);
+    }
+
+    public function perusahaan(){
+        return $this->belongsTo(Compeny::class);
     }
 }
