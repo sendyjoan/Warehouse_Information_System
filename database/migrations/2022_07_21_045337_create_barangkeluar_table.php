@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('barangkeluar', function (Blueprint $table) {
             $table->id();
+            $table->string('dokumen_pendukung');
             $table->timestamps();
         });
     }
