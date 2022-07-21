@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Gender;
 use App\Models\Jabatan;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -35,6 +36,10 @@ class User extends Authenticatable
 
     public function jabatan(){
         return $this->belongsTo(Jabatan::class);
+    }
+
+    public function gender(){
+        return $this->belongsTo(Gender::class);
     }
 
     /**
