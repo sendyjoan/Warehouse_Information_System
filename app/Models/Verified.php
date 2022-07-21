@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Compeny;
 use App\Models\Consumer;
 use App\Models\Supplier;
+use App\Models\BarangMasuk;
 use App\Models\BarangKeluar;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -34,5 +35,9 @@ class Verified extends Model
 
     public function barangkeluar(){
         return $this->hasMany(BarangKeluar::class);
+    }
+
+    public function barangmasukr(){
+        return $this->hasMany(BarangMasuk::class);
     }
 }

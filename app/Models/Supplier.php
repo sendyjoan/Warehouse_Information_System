@@ -2,8 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Gender;
+use App\Models\Compeny;
+use App\Models\Verified;
+use App\Models\BarangMasuk;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Supplier extends Model
 {
@@ -32,5 +36,9 @@ class Supplier extends Model
 
     public function perusahaan(){
         return $this->belongsTo(Compeny::class);
+    }
+
+    public function barangmasuk(){
+        return $this->hasMany(BarangMasuk::class);
     }
 }
