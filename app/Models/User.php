@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Jabatan;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -17,11 +18,24 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $table = 'users';
+    protected $primaryKey = 'NIP';
+
     protected $fillable = [
+        'NIP',
         'name',
         'email',
+        'alamat',
+        'nomor_telephone',
+        'isBeku',
         'password',
+        'jabatan_id',
+        'gender_id',
     ];
+
+    public function jabatan(){
+        return $this->belongsTo(Jabatan::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
