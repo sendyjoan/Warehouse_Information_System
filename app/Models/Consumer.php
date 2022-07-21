@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Gender;
+use App\Models\Verified;
+use App\Models\BarangKeluar;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Consumer extends Model
 {
@@ -27,5 +30,9 @@ class Consumer extends Model
 
     public function verified(){
         return $this->belongsTo(Verified::class);
+    }
+
+    public function barangkeluar(){
+        return $this->hasMany(BarangKeluar::class);
     }
 }
