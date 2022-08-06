@@ -61,17 +61,17 @@
                                 </i>
                                 View
                             </a>
-                            <a class="btn btn-warning btn-sm" href="#">
+                            <a class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editPegawai">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
-                            <a class="btn btn-dark btn-sm" href="#">
+                            <a class="btn btn-dark btn-sm" data-toggle="modal" data-target="#bekukanPegawai">
                                 <i class="fas fa-pencil-alt">
                                 </i>
-                                Edit Status
+                                Pembekuan
                             </a>
-                            <a class="btn btn-danger btn-sm" href="#">
+                            <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deletePegawai">
                                 <i class="fas fa-trash">
                                 </i>
                                 Delete
@@ -135,13 +135,83 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Detail Pegawai</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <h1 class="text-center">Sendy Joan Kevin</h1>
+                                    <p>Nomor Induk Pegawai : </p>
+                                    <p></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Modal Edit Pegawai --}}
+                    <div class="modal fade" id="editPegawai" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Pegawai</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1 class="text-center">Sendy Joan Kevin</h1>
+                                    <p>Nomor Induk Pegawai : </p>
+                                    <p></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Modal Bekukan Pegawai --}}
+                    <div class="modal fade" id="bekukanPegawai" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Validasi Pembekuan Akun</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1 class="text-center">Anda yakin akan membekukan akun?</h1>
+                                    <p>Detail Akun : </p>
+                                    <p>Nomor Induk Pegawai : </p>
+                                    <p></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Modal Bekukan Pegawai --}}
+                    <div class="modal fade" id="deletePegawai" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Validasi Hapus Akun</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1 class="text-center">Anda yakin akan menghapus akun?</h1>
+                                    <p>Detail Akun : </p>
                                     <p>Nomor Induk Pegawai : </p>
                                     <p></p>
                                 </div>
