@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PerusahaanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,7 @@ Route::get('/satuan', function () {
 });
 
 Route::resource('pegawai', PegawaiController::class);
+Route::resource('perusahaan', PerusahaanController::class);
 
 Auth::routes();
 
